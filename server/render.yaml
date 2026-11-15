@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: ekotro-api
+    runtime: node
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: DB_NAME
+        value: ekotro
+      - key: CLIENT_URL
+        sync: false
+      - key: AUTH_URL
+        sync: false
