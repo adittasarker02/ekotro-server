@@ -1,9 +1,3 @@
-/**
- * Vercel serverless entry (plain CommonJS). The catch-all file name [...slug].js makes Vercel send
- * every /api/* request here with the original URL, so Express can route it normally.
- * It loads the already-compiled Express app from ./dist (created by `npm run build`),
- * so Vercel never has to compile TypeScript on its own.
- */
 let app;
 let createAppFn;
 let connectDB;
